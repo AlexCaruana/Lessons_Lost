@@ -169,7 +169,7 @@ SHP_0 <- get_eurostat_geospatial(resolution = 10,
 
 # Merged
 # Exported as 1000px x 800px
-Figure_1 <- ERDF_Heatmap_Total_Projects + LIFE_Heatmap_Total_Projects + ERDF_Heatmap_Funding_Quantity + LIFE_Heatmap_Funding_Quantity + plot_annotation(tag_levels = 'A')
+Figure_1 <- LIFE_Heatmap_Total_Projects + ERDF_Heatmap_Total_Projects + LIFE_Heatmap_Funding_Quantity + ERDF_Heatmap_Funding_Quantity + plot_annotation(tag_levels = 'A')
 
 
 

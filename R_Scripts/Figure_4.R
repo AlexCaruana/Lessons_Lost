@@ -86,7 +86,7 @@ setwd('C:/Users/Alex/Desktop/Masters Thesis/Final Sorted Datasets - Github')
                                                                                        "Short summary website",
                                                                                        "No data available"))
         
-        Document_Results <- ggplot(Document_DF, aes(fill= Funding, y = Count_2, x= Document_Type_Factor, group=majortype)) +
+        Document_Results <- ggplot(Document_DF, aes(fill= Funding, y = Count_2, x= Document_Type_Factor, group=forcats::fct_rev(majortype))) +
                 geom_col(position="dodge",alpha=0.8, width=0.8) +
                 scale_fill_manual(values = c("#295E11","#58094F"), labels=c("ERDF","LIFE")) +
                 scale_y_continuous(labels = scales::percent, breaks = seq(from = 0, to = 0.9, by = 0.10), limits = c(0,0.9)) +
@@ -164,13 +164,13 @@ setwd('C:/Users/Alex/Desktop/Masters Thesis/Final Sorted Datasets - Github')
                                                                                          "No evaluation",
                                                                                          "No data available"))
         
-        Evaluation_Results <- ggplot(Evaluation_DF, aes(fill= Funding_Evalulation, y = Count_3, x= Eval_Type_Factor, group=majortype)) +
+        Evaluation_Results <- ggplot(Evaluation_DF, aes(fill= Funding_Evalulation, y = Count_3, x= Eval_Type_Factor, group=forcats::fct_rev(majortype))) +
                 geom_col(position="dodge",alpha=0.8, width=0.8) +
                 scale_fill_manual(values = c("#295E11","#58094F"), labels=c("ERDF","LIFE")) +
                 scale_y_continuous(labels = scales::percent, breaks = seq(from = 0, to = 0.90, by = 0.10), limits = c(0,0.90)) +
                 theme_bw()+
                 ylab("Proportion of projects which have produced impact evaluations") +
-                guides(fill=guide_legend(title='')) +
+                guides(fill=guide_legend(title='', reverse=T)) +
                 theme(axis.text.x = element_text(size = 10, angle = 50, hjust = 1)) +
                 theme(axis.title.x = element_text(margin = margin(t = 15, r = 0, b = 0, l = 0))) +
                 theme(axis.title.x = element_blank()) +
@@ -220,7 +220,7 @@ setwd('C:/Users/Alex/Desktop/Masters Thesis/Final Sorted Datasets - Github')
         LIFE_ERDF_Box <- setNames(LIFE_ERDF_Box, c("Project_ID", "Publications", "Label"))
       
         
-        PublicationBoxPlot <-ggplot(LIFE_ERDF_Box, aes(x = Label, y = Publications, fill = Label)) +
+        PublicationBoxPlot <-ggplot(LIFE_ERDF_Box, aes(x = forcats::fct_rev(Label), y = Publications, fill = Label)) +
           geom_boxplot(alpha = 0.6, width = 0.35, outlier.color=NA) + 
           coord_cartesian(ylim =  c(0, 14)) + 
           geom_point(position = position_jitter(seed = 1, width = 0.05, h = 0.15), alpha = 0.3) +

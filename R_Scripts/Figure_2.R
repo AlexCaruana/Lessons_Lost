@@ -57,6 +57,5 @@ Bubble_DF$Stratification_Group = factor(Bubble_DF$Stratification_Group, levels=c
 
 # Merged
 # Exported as 1000px x 1000px.  Legend then centered through photoshop.
-Figure_2 <- ERDF_Bubble + LIFE_Bubble + plot_annotation(tag_levels = 'A') +
-        plot_layout(ncol = 1)
-
+Figure_2 <- LIFE_Bubble + ERDF_Bubble + plot_annotation(tag_levels = 'A') +
+  plot_layout(ncol = 1)

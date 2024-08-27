@@ -94,13 +94,16 @@ setwd('C:/Users/Alex/Desktop/Masters Thesis/Final Sorted Datasets - Github')
                 theme(axis.text.x = element_text(size = 8, angle = 70, hjust = 1)) +
                 theme(axis.title.x = element_text(margin = margin(t = 15, r = 0, b = 0, l = 0)))+ 
                 theme_bw() +
+                theme(legend.position="bottom") +
+                theme(axis.title.y=element_blank(),
+                axis.text.y=element_blank(),
+                axis.ticks.y=element_blank())+
                 theme(legend.position = "none")+
                 theme(axis.title.x = element_blank(),
-                      axis.title.y = element_blank()) +
+                axis.title.y = element_blank()) +
                 ggtitle("ERDF") +
                 theme(plot.title = element_text(hjust = 0.5),
-                      plot.margin = margin(5.5, 1.5, 5.5, 5.5)) +
-                theme(axis.text.y = element_blank())
+                plot.margin = margin(5.5, 0, 5.5, 5.5))
 
 # LIFE Analysis
         LIFE <- read_excel("ERDF & LIFE Extracted Datasets 1.0.xlsx", sheet = "2.2 LIFE Dataset")
@@ -168,20 +171,17 @@ setwd('C:/Users/Alex/Desktop/Masters Thesis/Final Sorted Datasets - Github')
                 scale_y_continuous(labels = scales::percent) + 
                 scale_fill_manual(values = c("#1A5D1A","#D55E00","#E69F00", "#052955","#A7B8F8","#72797a", "#000000")) +
                 coord_flip() +
-                theme(axis.text.x = element_text(size = 8, angle = 70, hjust = 1)) +
-                theme(axis.title.x = element_text(margin = margin(t = 15, r = 0, b = 0, l = 0)))+ 
-                theme_bw() +
-                theme(legend.position="bottom") +
-                theme(axis.title.y=element_blank(),
-                      axis.text.y=element_blank(),
-                      axis.ticks.y=element_blank())+
-                theme(legend.position = "none")+
-                theme(axis.title.x = element_blank(),
-                      axis.title.y = element_blank()) +
-                ggtitle("LIFE") +
-                theme(plot.title = element_text(hjust = 0.5),
-                      plot.margin = margin(5.5, 0, 5.5, 5.5))
+          theme(axis.text.x = element_text(size = 8, angle = 70, hjust = 1)) +
+          theme(axis.title.x = element_text(margin = margin(t = 15, r = 0, b = 0, l = 0)))+ 
+          theme_bw() +
+          theme(legend.position = "none")+
+          theme(axis.title.x = element_blank(),
+                axis.title.y = element_blank()) +
+          ggtitle("LIFE") +
+          theme(plot.title = element_text(hjust = 0.5),
+                plot.margin = margin(5.5, 1.5, 5.5, 5.5)) +
+          theme(axis.text.y = element_blank())
 # Merged
 # Exported as 1000px x 600px.  Legend and side annotation was added in photoshop.
-Figure_3 <- ERDF_Review_Fig + LIFE_Review_Fig + plot_annotation(tag_levels = 'A')
+Figure_3 <- LIFE_Review_Fig + ERDF_Review_Fig + plot_annotation(tag_levels = 'A')
 
