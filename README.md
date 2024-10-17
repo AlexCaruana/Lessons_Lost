@@ -1,7 +1,7 @@
 # Lessons Lost: Lack of requirements for post-project evaluation and reporting is hindering evidence-based conservation.
 
 The datasets and r-code used within this publication have been made publicly available.
-Publication link - 
+Accepted for publication in Conservation Science & Practise
 
 ## Abstract
 For conservation to be based on evidence, the outcomes of conservation actions need to be shared. The European Union (EU) is a major funder of conservation action in Europe through the well-studied LIFE Programme. Less well-known, but also funding substantial conservation action, is the European Regional Development Fund (ERDF). Through a systematic review of conservation projects funded by LIFE and ERDF, we identify substantial expenditure on biodiversity conservation (€ 1300M and 760M between 2014 and 2024 respectively). We explore the extent to which LIFE & ERDF contribute to building an evidence base about the effectiveness of conservation actions.  There were differences between LIFE and ERDF in the extent to which documentation about the project was publicly available (89% and 26% respectively), and large differences in whether any form of project evaluation was available (63% and 5% respectively). A possible explanation for these results is differing funder requirements regarding the monitoring and reporting of project implementation and outcomes. We explore funder requirements across a sample of other conservation funders and suggest how changes could incentivize higher quality sharing of project outcomes. This would expand the evidence base needed to improve the effectiveness of conservation actions.
